@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashley Lim | Data Scientist & ML Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <!-- ════════════════════════════════
+         DRAMATIC INTRO OVERLAY
+    ════════════════════════════════ -->
+    <div id="intro-overlay">
+      <!-- Decorative grid lines on curtains -->
+      <div class="intro-grid-left"></div>
+      <div class="intro-grid-right"></div>
+      <!-- Two curtain halves -->
+      <div class="intro-half" id="intro-left"></div>
+      <div class="intro-half" id="intro-right"></div>
+      <!-- Center content -->
+      <div class="intro-content" id="intro-content">
+        <div class="intro-badge mono">Portfolio 2026</div>
+        <div class="intro-logo">AL</div>
+        <div class="intro-bar"><div class="intro-progress"></div></div>
+        <h1 class="intro-name" id="intro-name-el"></h1>
+        <p class="intro-role mono">Data Scientist &amp; ML Engineer · NUS</p>
+      </div>
+    </div>
+
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav id="topbar">
+      <div class="nav-logo mono">
+        <span class="bracket">&lt;</span>AshleyLim<span class="bracket"> /&gt;</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about"         data-section="about">About</a></li>
+        <li><a href="#gallery"       data-section="gallery">Gallery</a></li>
+        <li><a href="#skills"        data-section="skills">Skills</a></li>
+        <li><a href="#experience"    data-section="experience">Experience</a></li>
+        <li><a href="#projects"      data-section="projects">Projects</a></li>
+        <li><a href="#featured"      data-section="featured">Featured</a></li>
+        <li><a href="#certifications" data-section="certifications">Certs</a></li>
+        <li><a href="#contact"       data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://www.linkedin.com/in/ashlimlo" target="_blank" class="nav-icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://ashlimlo.github.io/" target="_blank" class="nav-icon" aria-label="Portfolio">
+          <i class="fas fa-globe"></i>
+        </a>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- ════════════════════════════════
+         HERO
+    ════════════════════════════════ -->
+    <section id="hero">
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-grid"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+
+      <div class="hero-content">
+        <!-- Profile Photo -->
+        <div class="hero-avatar">
+          <img src="public/Main.JPG" alt="Ashley Lim" class="hero-avatar-img" />
+        </div>
+
+        <div class="hero-label">
+          <span class="label-dot"></span>
+          <span class="mono">MSc Data Science &amp; ML &nbsp;·&nbsp; NUS &nbsp;·&nbsp; Singapore</span>
+        </div>
+
+        <h1 class="hero-name glitch" data-text="Ashley Lim">Ashley Lim</h1>
+
+        <div class="typewriter-row">
+          <span class="tw-prefix">I build&nbsp;</span>
+          <span id="tw-text" class="tw-target"></span>
+          <span class="tw-cursor">_</span>
+        </div>
+
+        <p class="hero-desc">
+          Passionate about applying data-driven approaches to real-world challenges.
+          From ETL pipelines to LLM applications — turning raw data into strategic impact.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary">
+            View My Work <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="mailto:ashley@example.com" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="3">0</span><span class="stat-sym">+</span>
+            <span class="stat-label">Years Exp</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="8">0</span><span class="stat-sym">+</span>
+            <span class="stat-label">Internships</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="40">0</span><span class="stat-sym">+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="9">0</span><span class="stat-sym">+</span>
+            <span class="stat-label">Volunteer Orgs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span class="mono">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         ABOUT
+    ════════════════════════════════ -->
+    <section id="about">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 01. about</span>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-text reveal">
+            <p>
+              Hello! I'm <strong>Ashley</strong>, a
+              <strong>MSc Data Science and Machine Learning</strong> student at the
+              <strong>National University of Singapore</strong>. I recently graduated
+              with a degree in Data Science and Analytics, and I'm passionate about
+              applying data-driven approaches to solve real-world challenges.
+            </p>
+            <p>
+              Currently interning as a <strong>Big Data Engineer at Tencent</strong>
+              and a recipient of the <strong>IMDA Postgraduate Scholarship</strong>.
+              My experience spans data engineering, machine learning, NLP, and
+              generative AI across companies like Temasek, ShopBack, Shopee,
+              and foodpanda.
+            </p>
+            <p>
+              Beyond data, I'm an internationally competitive badminton player,
+              having represented Singapore at the FISU World University Games and
+              multiple ASEAN School Games. Always open to connecting and learning
+              from others in the field.
+            </p>
+            <div class="about-actions">
+              <a href="https://ashlimlo.github.io/" target="_blank" class="chip-link">
+                <i class="fas fa-globe"></i> Main Portfolio
+              </a>
+              <a href="https://www.linkedin.com/in/ashlimlo" target="_blank" class="chip-link">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div class="about-cards reveal">
+            <div class="info-card">
+              <div class="ic-icon cyan"><i class="fas fa-graduation-cap"></i></div>
+              <div class="ic-body">
+                <h4>Education</h4>
+                <p>MSc Data Science &amp; ML<br /><span class="dim">National University of Singapore</span></p>
+                <p>BSc Data Science &amp; Analytics<br /><span class="dim">National University of Singapore</span></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="ic-icon purple"><i class="fas fa-briefcase"></i></div>
+              <div class="ic-body">
+                <h4>Current</h4>
+                <p>Big Data Engineer — Tencent<br /><span class="dim">Jan 2026 – Present</span></p>
+                <p>IMDA Postgraduate Scholar<br /><span class="dim">Aug 2025 – Present</span></p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="ic-icon magenta"><i class="fas fa-trophy"></i></div>
+              <div class="ic-body">
+                <h4>Highlights</h4>
+                <p>IMDA SG Digital Young Leader<br />FISU World University Games<br />NUS Achievement Award · Badminton</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         GALLERY
+    ════════════════════════════════ -->
+    <section id="gallery">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 02. gallery</span>
+          <h2>Sports &amp; Life</h2>
+        </div>
+      </div>
+      <div class="gallery-scene">
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carousel-track"></div>
+        </div>
+        <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </section>
+
+    <!-- ════════════════════════════════
+         SKILLS
+    ════════════════════════════════ -->
+    <section id="skills">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 03. tech stack</span>
+          <h2>Skills &amp; Technologies</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-code sc-icon cyan"></i>
+              <span>Programming Languages</span>
+            </div>
+            <div class="badges">
+              <span class="badge cyan">Python</span>
+              <span class="badge cyan">R</span>
+              <span class="badge cyan">Java</span>
+              <span class="badge cyan">SQL</span>
+              <span class="badge cyan">PrestoSQL</span>
+              <span class="badge cyan">Trino</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-chart-bar sc-icon purple"></i>
+              <span>Data Visualization &amp; BI</span>
+            </div>
+            <div class="badges">
+              <span class="badge purple">Tableau</span>
+              <span class="badge purple">Google Looker Studio</span>
+              <span class="badge purple">Power BI</span>
+              <span class="badge purple">Metabase</span>
+              <span class="badge purple">Microsoft Excel</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-database sc-icon green"></i>
+              <span>Databases &amp; Query Engines</span>
+            </div>
+            <div class="badges">
+              <span class="badge green">Snowflake</span>
+              <span class="badge green">Hive</span>
+              <span class="badge green">DBeaver</span>
+              <span class="badge green">Google BigQuery</span>
+              <span class="badge green">Redshift</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-cogs sc-icon orange"></i>
+              <span>Data Engineering &amp; Automation</span>
+            </div>
+            <div class="badges">
+              <span class="badge orange">Apache Airflow</span>
+              <span class="badge orange">dbt</span>
+              <span class="badge orange">UiPath</span>
+              <span class="badge orange">ETL Pipelines</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-brain sc-icon magenta"></i>
+              <span>Machine Learning &amp; AI</span>
+            </div>
+            <div class="badges">
+              <span class="badge magenta">NLP</span>
+              <span class="badge magenta">Recommendation Systems</span>
+              <span class="badge magenta">Model Optimization</span>
+              <span class="badge magenta">Model Deployment</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-robot sc-icon cyan"></i>
+              <span>Generative AI &amp; LLMs</span>
+            </div>
+            <div class="badges">
+              <span class="badge cyan">Amazon Bedrock</span>
+              <span class="badge cyan">OpenAI API</span>
+              <span class="badge cyan">Prompt Engineering</span>
+              <span class="badge cyan">Vector DB Search</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-globe sc-icon purple"></i>
+              <span>Frontend Development</span>
+            </div>
+            <div class="badges">
+              <span class="badge purple">HTML</span>
+              <span class="badge purple">CSS</span>
+              <span class="badge purple">JavaScript</span>
+              <span class="badge purple">React</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         EXPERIENCE
+    ════════════════════════════════ -->
+    <section id="experience">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 04. experience</span>
+          <h2>Professional Experience</h2>
+        </div>
+        <div class="timeline">
+
+          <!-- Tencent -->
+          <div class="tl-item reveal" data-cat="data">
+            <div class="tl-dot pulse"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#00b4ff">T</span>
+                  <div>
+                    <h3>Big Data Engineer</h3>
+                    <span class="co-name">Tencent · Internship</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">Jan 2026 – Present</span>
+                  <span class="live-badge">● Live</span>
+                </div>
+              </div>
+              <p class="tl-dept">Back-End Development Team</p>
+            </div>
+          </div>
+
+          <!-- IMDA -->
+          <div class="tl-item reveal" data-cat="leadership">
+            <div class="tl-dot pulse"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#2563eb">I</span>
+                  <div>
+                    <h3>IMDA Postgraduate Scholar</h3>
+                    <span class="co-name">IMDA</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">Aug 2025 – Present</span>
+                  <span class="live-badge">● Live</span>
+                </div>
+              </div>
+              <div class="tl-nested-role">
+                <span class="nr-title">SG Digital Young Leader</span>
+                <span class="nr-date">Apr 2023 – Present · 2 yrs 11 mos</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>6-month mentorship programme with Algorithm Lead at TikTok</li>
+                <li>6-month mentorship programme with Chief Data Scientist at SAP</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Temasek Data Scientist -->
+          <div class="tl-item reveal" data-cat="data">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#16a34a">T</span>
+                  <div>
+                    <h3>Data Scientist</h3>
+                    <span class="co-name">Temasek · Internship</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">Aug – Dec 2025 · 5 mos</span>
+                </div>
+              </div>
+              <p class="tl-dept">Automation, Analytics and AI</p>
+              <div class="tl-tags">
+                <span class="tl-tag">LLMs</span>
+                <span class="tl-tag">Snowflake</span>
+                <span class="tl-tag">SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ShopBack -->
+          <div class="tl-item reveal" data-cat="data">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#e11d48">S</span>
+                  <div>
+                    <h3>Data Analyst</h3>
+                    <span class="co-name">ShopBack · Internship</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">Jan – May 2025 · 5 mos</span>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Optimized Python-based ETL pipelines to automate regulatory reporting, reducing manual time and increasing accuracy</li>
+                <li>Integrated data pipelines with Metabase dashboards for real-time compliance visibility</li>
+                <li>Migrated deprecated dependencies across dbt models ensuring long-term stability</li>
+                <li>Created onboarding documentation for dbt models and Airflow DAGs to support new joiners</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">Python</span>
+                <span class="tl-tag">dbt</span>
+                <span class="tl-tag">Airflow</span>
+                <span class="tl-tag">Metabase</span>
+                <span class="tl-tag">Redshift</span>
+                <span class="tl-tag">SQL</span>
+                <span class="tl-tag">Tableau</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Temasek BA -->
+          <div class="tl-item reveal" data-cat="data">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#16a34a">T</span>
+                  <div>
+                    <h3>Business Analyst</h3>
+                    <span class="co-name">Temasek · Internship</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">Aug 2024 – May 2025 · 10 mos</span>
+                </div>
+              </div>
+              <p class="tl-dept">Investment Finance</p>
+              <ul class="tl-bullets">
+                <li>Developed an ML model to extract key financial metrics from fund documents with <strong>over 90% accuracy</strong>, reducing reliance on manual review</li>
+                <li>Built a bot to auto-rename and organize received documents based on metadata (issuer, date, type)</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">UiPath</span>
+                <span class="tl-tag">Generative AI</span>
+                <span class="tl-tag">NLP</span>
+                <span class="tl-tag">RPA</span>
+                <span class="tl-tag">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ministry of Manpower -->
+          <div class="tl-item reveal" data-cat="data">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#7c3aed">M</span>
+                  <div>
+                    <h3>Data Analyst</h3>
+                    <span class="co-name">Ministry of Manpower · Internship</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">May – Aug 2024 · 4 mos</span>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Developed NLP models to process and categorize data, enhancing workplace safety analytics accuracy</li>
+                <li>Built interactive Tableau dashboards for the Workplace Safety and Health Division</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">Python</span>
+                <span class="tl-tag">NLP</span>
+                <span class="tl-tag">Tableau</span>
+                <span class="tl-tag">Predictive Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shopee -->
+          <div class="tl-item reveal" data-cat="data">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#f97316">S</span>
+                  <div>
+                    <h3>Data Analyst</h3>
+                    <span class="co-name">Shopee · Internship</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">Jan – Apr 2024 · 4 mos</span>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Automated reports and optimised queries using PrestoSQL to reduce manual data extraction time</li>
+                <li>Built user-friendly dashboards for Shopee's FP&amp;A team for Analytics Mart performance tracking</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">PrestoSQL</span>
+                <span class="tl-tag">Python</span>
+                <span class="tl-tag">Google Looker Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- foodpanda -->
+          <div class="tl-item reveal" data-cat="data">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <div class="tl-left">
+                  <span class="co-chip" style="--co:#ec4899">f</span>
+                  <div>
+                    <h3>Data Analyst</h3>
+                    <span class="co-name">foodpanda · Internship</span>
+                  </div>
+                </div>
+                <div class="tl-right">
+                  <span class="tl-date">Jan – Dec 2023 · 1 yr</span>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Evaluated pricing strategies via time series analysis &amp; SQL — adopted by senior management, enabling Laos market to reach a <strong>new milestone</strong></li>
+                <li>Developed report consolidation programme reducing monthly review creation time by <strong>80%</strong></li>
+                <li>Built Google Looker Studio dashboards for ASEAN &amp; North Asian markets on pricing performance &amp; KPIs</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tl-tag">SQL</span>
+                <span class="tl-tag">Python</span>
+                <span class="tl-tag">R</span>
+                <span class="tl-tag">Looker Studio</span>
+                <span class="tl-tag">BigQuery</span>
+                <span class="tl-tag">Tableau</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         PROJECTS
+    ════════════════════════════════ -->
+    <section id="projects">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 05. projects</span>
+          <h2>Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="proj-card reveal">
+            <div class="proj-bg"></div>
+            <span class="proj-num mono">01</span>
+            <div class="proj-body">
+              <p class="proj-org">NUS · Aug 2024 – Dec 2024</p>
+              <h3>Cyberbullying Detection in Social Media</h3>
+              <p class="proj-desc">
+                Investigates detection and classification of cyberbullying on social
+                media using NLP techniques and ML models. Leveraged a Kaggle dataset
+                with thorough EDA, text-cleaning preprocessing, and a range of models
+                from traditional classifiers to neural networks to assess effectiveness
+                in identifying offensive language.
+              </p>
+              <div class="proj-tech">
+                <span class="pt">NLP</span>
+                <span class="pt">Machine Learning</span>
+                <span class="pt">Python</span>
+                <span class="pt">Neural Networks</span>
+                <span class="pt">Text Classification</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card reveal">
+            <div class="proj-bg"></div>
+            <span class="proj-num mono">02</span>
+            <div class="proj-body">
+              <p class="proj-org">NUS · Jan 2024 – Apr 2024</p>
+              <h3>GXS Bank — Customer Churn Prediction</h3>
+              <p class="proj-desc">
+                Full-stack web application for GXS Bank focused on customer retention.
+                Predicts customer churn using ML models and provides actionable
+                suggestions. Interactive UI with CSV upload for custom dataset
+                predictions and user-friendly result visualisations.
+              </p>
+              <div class="proj-tech">
+                <span class="pt">Python</span>
+                <span class="pt">Machine Learning</span>
+                <span class="pt">HTML / CSS</span>
+                <span class="pt">Git</span>
+                <span class="pt">Data Visualisation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         FEATURED IN
+    ════════════════════════════════ -->
+    <section id="featured">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 06. press</span>
+          <h2>Featured In</h2>
+        </div>
+        <div class="featured-grid">
+
+          <a
+            href="https://www.science.nus.edu.sg/blog/2024/01/smash-hits/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="featured-card reveal"
+          >
+            <div class="fc-glow"></div>
+            <div class="fc-header">
+              <div class="fc-source">
+                <div class="fc-source-icon"><i class="fas fa-university"></i></div>
+                <div>
+                  <span class="fc-source-name">NUS Faculty of Science</span>
+                  <span class="fc-source-sub mono">science.nus.edu.sg</span>
+                </div>
+              </div>
+              <span class="fc-type-badge">Article</span>
+            </div>
+            <h3 class="fc-title">Smash Hits</h3>
+            <p class="fc-excerpt">
+              Spotlighted in the NUS Faculty of Science blog for competitive badminton achievements,
+              including representation at the FISU World University Games and the ASEAN School Games.
+            </p>
+            <div class="fc-footer">
+              <span class="fc-date mono">January 2024</span>
+              <span class="fc-cta">Read Article <i class="fas fa-external-link-alt"></i></span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         CERTIFICATIONS
+    ════════════════════════════════ -->
+    <section id="certifications">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 07. certifications</span>
+          <h2>Licenses &amp; Certifications</h2>
+        </div>
+
+        <div class="cert-filters">
+          <button class="cf-btn active" data-cf="all">All</button>
+          <button class="cf-btn" data-cf="analytics">Analytics &amp; BI</button>
+          <button class="cf-btn" data-cf="python">Python</button>
+          <button class="cf-btn" data-cf="sql">SQL</button>
+          <button class="cf-btn" data-cf="r">R</button>
+          <button class="cf-btn" data-cf="other">Other</button>
+        </div>
+
+        <div class="cert-grid" id="cert-grid">
+          <div class="cert-card featured" data-cc="other">
+            <div class="cert-issuer">National University of Singapore</div>
+            <div class="cert-name">NUS Achievement Award (Merit) — Sports Team of the Year · Badminton</div>
+            <div class="cert-date">Oct 2023</div>
+          </div>
+          <div class="cert-card featured" data-cc="other">
+            <div class="cert-issuer">UiPath</div>
+            <div class="cert-name">UiPath Academy RPA Citizen Developer Foundation</div>
+            <div class="cert-date">Aug 2024</div>
+          </div>
+          <div class="cert-card featured" data-cc="analytics">
+            <div class="cert-issuer">KPMG</div>
+            <div class="cert-name">Data Analytics Consulting Virtual Internship</div>
+            <div class="cert-date">Mar 2023</div>
+          </div>
+          <div class="cert-card featured" data-cc="analytics">
+            <div class="cert-issuer">PwC Switzerland</div>
+            <div class="cert-name">Power BI in Data Analytics Virtual Case Experience</div>
+            <div class="cert-date">Feb 2023</div>
+          </div>
+          <div class="cert-card featured" data-cc="analytics">
+            <div class="cert-issuer">Tata Group</div>
+            <div class="cert-name">Data Visualisation: Empowering Business with Effective Insights</div>
+            <div class="cert-date">Mar 2023</div>
+          </div>
+          <div class="cert-card" data-cc="analytics">
+            <div class="cert-issuer">Amplitude</div>
+            <div class="cert-name">Amplitude Foundations — Experiment</div>
+            <div class="cert-date">Feb 2025</div>
+          </div>
+          <div class="cert-card" data-cc="analytics">
+            <div class="cert-issuer">Amplitude</div>
+            <div class="cert-name">Amplitude Foundations — Analytics</div>
+            <div class="cert-date">Feb 2025</div>
+          </div>
+          <div class="cert-card" data-cc="other">
+            <div class="cert-issuer">Coursera</div>
+            <div class="cert-name">Private Equity and Venture Capital</div>
+            <div class="cert-date">Jun 2024</div>
+          </div>
+          <div class="cert-card" data-cc="other">
+            <div class="cert-issuer">ONLYOU Korean Language School</div>
+            <div class="cert-name">Korean Language — Beginner 1</div>
+            <div class="cert-date">Jun 2025</div>
+          </div>
+          <div class="cert-card" data-cc="other">
+            <div class="cert-issuer">ONLYOU Korean Language School</div>
+            <div class="cert-name">Korean Language — Foundation</div>
+            <div class="cert-date">Mar 2025</div>
+          </div>
+          <div class="cert-card" data-cc="python">
+            <div class="cert-issuer">edX · Georgia Tech</div>
+            <div class="cert-name">Computing in Python III: Data Structures</div>
+            <div class="cert-date">Mar 2024</div>
+          </div>
+          <div class="cert-card" data-cc="python">
+            <div class="cert-issuer">edX · Georgia Tech</div>
+            <div class="cert-name">Computing in Python II: Control Structures</div>
+            <div class="cert-date">Nov 2023</div>
+          </div>
+          <div class="cert-card" data-cc="python">
+            <div class="cert-issuer">edX · Georgia Tech</div>
+            <div class="cert-name">Computing in Python I: Fundamentals &amp; Procedural Programming</div>
+            <div class="cert-date">Nov 2023</div>
+          </div>
+          <div class="cert-card" data-cc="other">
+            <div class="cert-issuer">edX</div>
+            <div class="cert-name">AP Physics 1</div>
+            <div class="cert-date">Mar 2024</div>
+          </div>
+          <div class="cert-card" data-cc="sql">
+            <div class="cert-issuer">DataCamp</div>
+            <div class="cert-name">Introduction to Shell &amp; Git</div>
+            <div class="cert-date">Jan 2024</div>
+          </div>
+          <div class="cert-card" data-cc="sql">
+            <div class="cert-issuer">DataCamp · 9 certificates</div>
+            <div class="cert-name">SQL Series: Introduction → Intermediate → Data Manipulation → Joining → SQL Server → Relational Databases → Applying SQL</div>
+            <div class="cert-date">Dec 2022</div>
+          </div>
+          <div class="cert-card" data-cc="r">
+            <div class="cert-issuer">DataCamp · 8 certificates</div>
+            <div class="cert-name">R Series: Introduction → Intermediate → Tidyverse → ggplot2 (×2) → R Markdown → String Manipulation → Importing Data</div>
+            <div class="cert-date">Aug – Oct 2022</div>
+          </div>
+          <div class="cert-card" data-cc="r">
+            <div class="cert-issuer">LinkedIn</div>
+            <div class="cert-name">R (Programming Language) Skill Assessment</div>
+            <div class="cert-date">Dec 2022</div>
+          </div>
+          <div class="cert-card" data-cc="analytics">
+            <div class="cert-issuer">DataCamp</div>
+            <div class="cert-name">Introduction to Tableau</div>
+            <div class="cert-date">Nov 2022</div>
+          </div>
+          <div class="cert-card" data-cc="analytics">
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <div class="cert-name">Power BI Top Skills · Business Analytics: Marketing Data</div>
+            <div class="cert-date">Apr 2023</div>
+          </div>
+          <div class="cert-card" data-cc="analytics">
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <div class="cert-name">Looker Studio for Beginners · Learning Google Data Studio for Marketers</div>
+            <div class="cert-date">Feb – Apr 2023</div>
+          </div>
+          <div class="cert-card" data-cc="analytics">
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <div class="cert-name">Business Analytics Foundations: Descriptive &amp; Predictive / Prescriptive Analytics</div>
+            <div class="cert-date">Apr 2023</div>
+          </div>
+          <div class="cert-card" data-cc="sql">
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <div class="cert-name">SQL Tips and Tricks for Data Science · SQL on the Go</div>
+            <div class="cert-date">Apr 2023</div>
+          </div>
+          <div class="cert-card" data-cc="analytics">
+            <div class="cert-issuer">LinkedIn Learning</div>
+            <div class="cert-name">Learning BigQuery · Creating Dashboards in Google Cloud Platform</div>
+            <div class="cert-date">Jan – Apr 2023</div>
+          </div>
+        </div>
+        <div class="show-more-wrap">
+          <button class="show-more-btn" id="cert-show-more">
+            <span>Show more</span> <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         VOLUNTEERING
+    ════════════════════════════════ -->
+    <section id="volunteering">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 08. volunteering</span>
+          <h2>Community Service</h2>
+        </div>
+        <div class="vol-grid">
+          <div class="vol-card reveal">
+            <div class="vol-icon" style="--vic:#f72585"><i class="fas fa-ribbon"></i></div>
+            <h4>Singapore Cancer Society</h4>
+            <span class="vol-date">Dec 2019 · 1 mo</span>
+            <p>Packed and delivered care packs to cancer patients.</p>
+          </div>
+          <div class="vol-card reveal">
+            <div class="vol-icon" style="--vic:#00d4ff"><i class="fas fa-running"></i></div>
+            <h4>Special Olympics</h4>
+            <span class="vol-date">Aug 2019 · 1 mo</span>
+            <p>Organised a game item for athletes with special needs at the annual Play Inclusive competition.</p>
+          </div>
+          <div class="vol-card reveal">
+            <div class="vol-icon" style="--vic:#10b981"><i class="fas fa-utensils"></i></div>
+            <h4>The Food Bank Singapore</h4>
+            <span class="vol-date">Jun 2018 · 1 mo</span>
+            <p>Sorted, inventoried and packed food donations.</p>
+          </div>
+          <div class="vol-card reveal vol-hidden">
+            <div class="vol-icon" style="--vic:#8b5cf6"><i class="fas fa-hands-helping"></i></div>
+            <h4>World-Champ Singapore</h4>
+            <span class="vol-date">Sep 2018 · 1 mo</span>
+            <p>Student Volunteer.</p>
+          </div>
+          <div class="vol-card reveal vol-hidden">
+            <div class="vol-icon" style="--vic:#f59e0b"><i class="fas fa-heart"></i></div>
+            <h4>Willing Hearts</h4>
+            <span class="vol-date">Sep 2017 · 1 mo</span>
+            <p>Preparation of ingredients, packing lunch boxes, cleaning and washing.</p>
+          </div>
+          <div class="vol-card reveal vol-hidden">
+            <div class="vol-icon" style="--vic:#ec4899"><i class="fas fa-donate"></i></div>
+            <h4>Singapore Council of Women's Organisations</h4>
+            <span class="vol-date">Jun 2017 · 1 mo</span>
+            <p>Fundraising volunteer.</p>
+          </div>
+          <div class="vol-card reveal vol-hidden">
+            <div class="vol-icon" style="--vic:#6366f1"><i class="fas fa-pray"></i></div>
+            <h4>FaithActs</h4>
+            <span class="vol-date">May 2016 · 1 mo</span>
+            <p>Student Volunteer.</p>
+          </div>
+          <div class="vol-card reveal vol-hidden">
+            <div class="vol-icon" style="--vic:#f72585"><i class="fas fa-child"></i></div>
+            <h4>Children's Cancer Foundation</h4>
+            <span class="vol-date">Feb – Aug 2016 · 7 mos</span>
+            <p>Member of The Dreamswork Project 2016 — Citi-YMCA Youth For Causes.</p>
+          </div>
+          <div class="vol-card reveal vol-hidden">
+            <div class="vol-icon" style="--vic:#10b981"><i class="fas fa-leaf"></i></div>
+            <h4>National Environment Agency</h4>
+            <span class="vol-date">Mar 2016 · 1 mo</span>
+            <p>Coastal clean-up volunteer.</p>
+          </div>
+        </div>
+        <div class="show-more-wrap">
+          <button class="show-more-btn" id="vol-show-more">
+            <span>Show more</span> <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         AWARDS
+    ════════════════════════════════ -->
+    <section id="awards">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 09. honors</span>
+          <h2>Honors &amp; Awards</h2>
+        </div>
+        <div class="awards-grid">
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-award aw-icon"></i>
+            <h3>EAGLES Award</h3>
+            <p>Edusave Award for Achievement, Good Leadership and Service</p>
+            <span class="aw-meta">2012–2014, 2018, 2020</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-medal aw-icon"></i>
+            <h3>RGS Cecily Hinchliffe Award</h3>
+            <p>Academic and Sporting Excellence</p>
+            <span class="aw-meta">Raffles Girls' School · Dec 2019</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-trophy aw-icon"></i>
+            <h3>Sportsmanship Award</h3>
+            <p>National Inter-School Badminton Championships</p>
+            <span class="aw-meta">Jan 2016</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-star aw-icon"></i>
+            <h3>Sports Girl of the Year</h3>
+            <p>Kong Hwa School</p>
+            <span class="aw-meta">Jan 2014</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-ribbon aw-icon"></i>
+            <h3>Raffles Colours Outstanding Award</h3>
+            <p>Leadership and Performance</p>
+            <span class="aw-meta">Raffles Girls' School · 2015 &amp; 2018</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-certificate aw-icon"></i>
+            <h3>SSSC Colours Award</h3>
+            <p>Singapore Schools Sports Council</p>
+            <span class="aw-meta">Yearly 2015–2019</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         CONTACT
+    ════════════════════════════════ -->
+    <section id="contact">
+      <div class="container">
+        <div class="sec-head centered">
+          <span class="sec-tag mono">// 10. contact</span>
+          <h2>Let's Connect</h2>
+          <p class="contact-sub">
+            Open to collaborations, conversations, and new opportunities in data science and AI.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <a href="mailto:ashley@example.com" class="contact-card reveal">
+            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+            <span class="cc-label">Email</span>
+            <span class="cc-val">ashley@example.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ashlimlo" target="_blank" class="contact-card reveal">
+            <div class="cc-icon"><i class="fab fa-linkedin"></i></div>
+            <span class="cc-label">LinkedIn</span>
+            <span class="cc-val">ashlimlo</span>
+          </a>
+          <a href="https://ashlimlo.github.io/" target="_blank" class="contact-card reveal">
+            <div class="cc-icon"><i class="fas fa-globe"></i></div>
+            <span class="cc-label">Main Portfolio</span>
+            <span class="cc-val">ashlimlo.github.io</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="mono footer-code">// Ashley Lim &nbsp;·&nbsp; Data Scientist &amp; ML Engineer &nbsp;·&nbsp; NUS &nbsp;·&nbsp; 2026</p>
+        <p class="footer-love">Designed &amp; built with ♥ and a lot of data</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
