@@ -1,14 +1,60 @@
 /* ═══════════════════════════════════════════
-   LOADER
+   INTRO OVERLAY / LOADER
 ═══════════════════════════════════════════ */
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('loader').classList.add('gone');
-    document.body.style.overflow = '';
-    startCounters();
-  }, 1500);
-});
-document.body.style.overflow = 'hidden';
+function startIntroOrLoader() {
+  const intro = document.getElementById('intro-overlay');
+  const introLeft = document.getElementById('intro-left');
+  const introRight = document.getElementById('intro-right');
+  const introContent = document.getElementById('intro-content');
+  const introNameEl = document.getElementById('intro-name-el');
+
+  // If we have the intro overlay, use it as the transition
+  if (intro && introLeft && introRight) {
+    document.body.style.overflow = 'hidden';
+
+    if (introNameEl) {
+      const name = 'Ashley Lim';
+      let i = 0;
+      const tick = () => {
+        introNameEl.textContent = name.slice(0, i);
+        i += 1;
+        if (i <= name.length) requestAnimationFrame(tick);
+      };
+      tick();
+    }
+
+    window.setTimeout(() => {
+      introLeft.classList.add('open');
+      introRight.classList.add('open');
+      if (introContent) introContent.classList.add('fade');
+
+      window.setTimeout(() => {
+        intro.classList.add('gone');
+        document.body.style.overflow = '';
+        startCounters();
+      }, 1100);
+    }, 900);
+
+    return;
+  }
+
+  // Fallback: old loader (if present)
+  const loader = document.getElementById('loader');
+  if (loader) {
+    document.body.style.overflow = 'hidden';
+    window.setTimeout(() => {
+      loader.classList.add('gone');
+      document.body.style.overflow = '';
+      startCounters();
+    }, 1500);
+    return;
+  }
+
+  document.body.style.overflow = '';
+  startCounters();
+}
+
+window.addEventListener('load', startIntroOrLoader);
 
 /* ═══════════════════════════════════════════
    CURSOR GLOW (desktop only)
@@ -363,3 +409,173 @@ document.querySelectorAll('.nav-links a').forEach(a => {
     burger.classList.remove('open');
   });
 });
+
+
+/* ═══════════════════════════════════════════
+   GALLERY CAROUSEL (3D)
+═══════════════════════════════════════════ */
+(function initGalleryCarousel() {
+  const track = document.getElementById('carousel-track');
+  const viewport = document.getElementById('carousel-viewport');
+  const dotsWrap = document.getElementById('carousel-dots');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+
+  if (!track || !dotsWrap) return;
+
+  const gallery = [
+    { src: "public/Faculty Banner.JPG", caption: "NUS Open House Banner" },
+    { src: "public/Squash.jpg", caption: "NUS Squash IHG" },
+    { src: "public/ASICS Tennis.JPG", caption: "ASICS Campus Advocate" },
+    { src: "public/ASG.JPEG", caption: "ASEAN School Games Badminton" },
+    { src: "public/Racketlon 2025.png", caption: "NUS Racketlon" },
+    { src: "public/WUG 2023.JPEG", caption: "World University Games" }
+  ];
+
+  // Build DOM
+  track.innerHTML = "";
+  dotsWrap.innerHTML = "";
+
+  gallery.forEach((item, idx) => {
+    const card = document.createElement('div');
+    card.className = 'carousel-item';
+    card.dataset.idx = String(idx);
+
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'ci-img-wrap';
+
+    const img = document.createElement('img');
+    img.src = item.src;
+    img.alt = item.caption;
+
+    imgWrap.appendChild(img);
+
+    const cap = document.createElement('div');
+    cap.className = 'ci-caption';
+    cap.textContent = item.caption;
+
+    card.appendChild(imgWrap);
+    card.appendChild(cap);
+
+    card.addEventListener('click', () => {
+      activeIndex = idx;
+      render();
+    });
+
+    track.appendChild(card);
+
+    const dot = document.createElement('button');
+    dot.className = 'c-dot';
+    dot.setAttribute('aria-label', `Go to image ${idx + 1}`);
+    dot.addEventListener('click', () => {
+      activeIndex = idx;
+      render();
+    });
+    dotsWrap.appendChild(dot);
+  });
+
+  const items = Array.from(track.querySelectorAll('.carousel-item'));
+  const dots  = Array.from(dotsWrap.querySelectorAll('.c-dot'));
+
+  // Start with the "main trio" showing: Faculty (left), Squash (center), ASICS (right)
+  let activeIndex = 1;
+
+  function clampIndex(i) {
+    const n = gallery.length;
+    return (i % n + n) % n;
+  }
+
+  function getTuning() {
+    const w = (viewport || track).clientWidth || window.innerWidth;
+    const isMobile = w < 720;
+    const spread = isMobile ? 42 : 48;               // degrees between cards
+    const radius = isMobile ? 420 : Math.min(560, Math.max(440, w * 0.55)); // depth
+    return { spread, radius, w, isMobile };
+  }
+
+  function render() {
+    activeIndex = clampIndex(activeIndex);
+    const { spread, radius } = getTuning();
+
+    items.forEach((el, i) => {
+      // wrap offsets so carousel feels circular
+      let offset = i - activeIndex;
+      const n = items.length;
+      if (offset > n / 2) offset -= n;
+      if (offset < -n / 2) offset += n;
+
+      const angle = offset * spread;
+      const rad = (angle * Math.PI) / 180;
+
+      const x = Math.sin(rad) * (radius * 0.70);
+      const z = Math.cos(rad) * radius;
+
+      const scale = 1 - Math.min(0.12 * Math.abs(offset), 0.36);
+      const rotY  = angle * -0.55;
+
+      const opacity = 1 - Math.min(0.18 * Math.abs(offset), 0.70);
+
+      el.style.transform = `translate(-50%, -50%) translateX(${x}px) translateZ(${z}px) rotateY(${rotY}deg) scale(${scale})`;
+      el.style.opacity   = opacity.toFixed(3);
+      el.style.filter    = `blur(${Math.min(2.2, Math.abs(offset) * 0.45)}px)`;
+      el.style.zIndex    = String(1000 - Math.abs(offset) * 10);
+      el.classList.toggle('active', i === activeIndex);
+    });
+
+    dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+  }
+
+  function next() { activeIndex += 1; render(); }
+  function prev() { activeIndex -= 1; render(); }
+
+  if (nextBtn) nextBtn.addEventListener('click', next);
+  if (prevBtn) prevBtn.addEventListener('click', prev);
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') prev();
+  });
+
+  // Drag / swipe
+  const dragEl = viewport || track;
+  let dragging = false;
+  let startX = 0;
+  let lastX = 0;
+  let acc = 0;
+
+  function onDown(e){
+    dragging = true;
+    startX = (e.touches ? e.touches[0].clientX : e.clientX);
+    lastX = startX;
+    acc = 0;
+  }
+  function onMove(e){
+    if (!dragging) return;
+    const x = (e.touches ? e.touches[0].clientX : e.clientX);
+    const dx = x - lastX;
+    lastX = x;
+    acc += dx;
+
+    const threshold = 42;
+    if (acc > threshold) { prev(); acc = 0; }
+    if (acc < -threshold) { next(); acc = 0; }
+  }
+  function onUp(){ dragging = false; }
+
+  dragEl.addEventListener('mousedown', onDown);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', onUp);
+
+  dragEl.addEventListener('touchstart', onDown, { passive: true });
+  dragEl.addEventListener('touchmove', onMove, { passive: true });
+  window.addEventListener('touchend', onUp, { passive: true });
+
+  // Auto rotate (subtle), pause on hover/touch
+  let auto = window.setInterval(next, 5200);
+  const stopAuto = () => { if (auto) { window.clearInterval(auto); auto = null; } };
+  dragEl.addEventListener('mouseenter', stopAuto);
+  dragEl.addEventListener('touchstart', stopAuto, { passive: true });
+
+  window.addEventListener('resize', render);
+  render();
+})();

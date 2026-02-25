@@ -44,22 +44,21 @@
       <div class="nav-logo mono">
         <span class="bracket">&lt;</span>AshleyLim<span class="bracket"> /&gt;</span>
       </div>
+      
       <ul class="nav-links">
-        <li><a href="#about"         data-section="about">About</a></li>
-        <li><a href="#gallery"       data-section="gallery">Gallery</a></li>
-        <li><a href="#skills"        data-section="skills">Skills</a></li>
-        <li><a href="#experience"    data-section="experience">Experience</a></li>
-        <li><a href="#projects"      data-section="projects">Projects</a></li>
-        <li><a href="#featured"      data-section="featured">Featured</a></li>
-        <li><a href="#certifications" data-section="certifications">Certs</a></li>
-        <li><a href="#contact"       data-section="contact">Contact</a></li>
+        <li><a href="#about"           data-section="about">About</a></li>
+        <li><a href="#experience"      data-section="experience">Experience</a></li>
+        <li><a href="#skills"          data-section="skills">Tech Stack</a></li>
+        <li><a href="#projects"        data-section="projects">Projects</a></li>
+        <li><a href="#certifications"  data-section="certifications">Certifications</a></li>
+        <li><a href="#gallery"         data-section="gallery">Gallery</a></li>
+        <li><a href="#awards"          data-section="awards">Honors</a></li>
+        <li><a href="#volunteering"    data-section="volunteering">Volunteering</a></li>
+        <li><a href="#contact"         data-section="contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <a href="https://www.linkedin.com/in/ashlimlo" target="_blank" class="nav-icon" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/ashleylim26/" target="_blank" class="nav-icon" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://ashlimlo.github.io/" target="_blank" class="nav-icon" aria-label="Portfolio">
-          <i class="fas fa-globe"></i>
         </a>
         <button id="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-sun"></i>
@@ -72,14 +71,16 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
+
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Tech Stack</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#featured">Featured</a></li>
         <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#awards">Honors</a></li>
+        <li><a href="#volunteering">Volunteering</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -87,7 +88,9 @@
     <!-- ════════════════════════════════
          HERO
     ════════════════════════════════ -->
-    <section id="hero">
+    
+
+<section id="hero">
       <canvas id="particle-canvas"></canvas>
       <div class="hero-grid"></div>
       <div class="hero-orb orb-1"></div>
@@ -122,7 +125,7 @@
           <a href="#experience" class="btn btn-primary">
             View My Work <i class="fas fa-arrow-right"></i>
           </a>
-          <a href="mailto:ashley@example.com" class="btn btn-outline">
+          <a href="mailto:ashleylim26@gmail.com" class="btn btn-outline">
             <i class="fas fa-envelope"></i> Get In Touch
           </a>
         </div>
@@ -156,10 +159,7 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         ABOUT
-    ════════════════════════════════ -->
-    <section id="about">
+<section id="about">
       <div class="container">
         <div class="sec-head">
           <span class="sec-tag mono">// 01. about</span>
@@ -189,10 +189,7 @@
               from others in the field.
             </p>
             <div class="about-actions">
-              <a href="https://ashlimlo.github.io/" target="_blank" class="chip-link">
-                <i class="fas fa-globe"></i> Main Portfolio
-              </a>
-              <a href="https://www.linkedin.com/in/ashlimlo" target="_blank" class="chip-link">
+              <a href="https://www.linkedin.com/in/ashleylim26/" target="_blank" class="chip-link">
                 <i class="fab fa-linkedin"></i> LinkedIn
               </a>
             </div>
@@ -227,146 +224,10 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         GALLERY
-    ════════════════════════════════ -->
-    <section id="gallery">
+<section id="experience">
       <div class="container">
         <div class="sec-head">
-          <span class="sec-tag mono">// 02. gallery</span>
-          <h2>Sports &amp; Life</h2>
-        </div>
-      </div>
-      <div class="gallery-scene">
-        <div class="carousel-viewport">
-          <div class="carousel-track" id="carousel-track"></div>
-        </div>
-        <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-      <div class="carousel-dots" id="carousel-dots"></div>
-    </section>
-
-    <!-- ════════════════════════════════
-         SKILLS
-    ════════════════════════════════ -->
-    <section id="skills">
-      <div class="container">
-        <div class="sec-head">
-          <span class="sec-tag mono">// 03. tech stack</span>
-          <h2>Skills &amp; Technologies</h2>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill-cat reveal">
-            <div class="sc-header">
-              <i class="fas fa-code sc-icon cyan"></i>
-              <span>Programming Languages</span>
-            </div>
-            <div class="badges">
-              <span class="badge cyan">Python</span>
-              <span class="badge cyan">R</span>
-              <span class="badge cyan">Java</span>
-              <span class="badge cyan">SQL</span>
-              <span class="badge cyan">PrestoSQL</span>
-              <span class="badge cyan">Trino</span>
-            </div>
-          </div>
-
-          <div class="skill-cat reveal">
-            <div class="sc-header">
-              <i class="fas fa-chart-bar sc-icon purple"></i>
-              <span>Data Visualization &amp; BI</span>
-            </div>
-            <div class="badges">
-              <span class="badge purple">Tableau</span>
-              <span class="badge purple">Google Looker Studio</span>
-              <span class="badge purple">Power BI</span>
-              <span class="badge purple">Metabase</span>
-              <span class="badge purple">Microsoft Excel</span>
-            </div>
-          </div>
-
-          <div class="skill-cat reveal">
-            <div class="sc-header">
-              <i class="fas fa-database sc-icon green"></i>
-              <span>Databases &amp; Query Engines</span>
-            </div>
-            <div class="badges">
-              <span class="badge green">Snowflake</span>
-              <span class="badge green">Hive</span>
-              <span class="badge green">DBeaver</span>
-              <span class="badge green">Google BigQuery</span>
-              <span class="badge green">Redshift</span>
-            </div>
-          </div>
-
-          <div class="skill-cat reveal">
-            <div class="sc-header">
-              <i class="fas fa-cogs sc-icon orange"></i>
-              <span>Data Engineering &amp; Automation</span>
-            </div>
-            <div class="badges">
-              <span class="badge orange">Apache Airflow</span>
-              <span class="badge orange">dbt</span>
-              <span class="badge orange">UiPath</span>
-              <span class="badge orange">ETL Pipelines</span>
-            </div>
-          </div>
-
-          <div class="skill-cat reveal">
-            <div class="sc-header">
-              <i class="fas fa-brain sc-icon magenta"></i>
-              <span>Machine Learning &amp; AI</span>
-            </div>
-            <div class="badges">
-              <span class="badge magenta">NLP</span>
-              <span class="badge magenta">Recommendation Systems</span>
-              <span class="badge magenta">Model Optimization</span>
-              <span class="badge magenta">Model Deployment</span>
-            </div>
-          </div>
-
-          <div class="skill-cat reveal">
-            <div class="sc-header">
-              <i class="fas fa-robot sc-icon cyan"></i>
-              <span>Generative AI &amp; LLMs</span>
-            </div>
-            <div class="badges">
-              <span class="badge cyan">Amazon Bedrock</span>
-              <span class="badge cyan">OpenAI API</span>
-              <span class="badge cyan">Prompt Engineering</span>
-              <span class="badge cyan">Vector DB Search</span>
-            </div>
-          </div>
-
-          <div class="skill-cat reveal">
-            <div class="sc-header">
-              <i class="fas fa-globe sc-icon purple"></i>
-              <span>Frontend Development</span>
-            </div>
-            <div class="badges">
-              <span class="badge purple">HTML</span>
-              <span class="badge purple">CSS</span>
-              <span class="badge purple">JavaScript</span>
-              <span class="badge purple">React</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════════════
-         EXPERIENCE
-    ════════════════════════════════ -->
-    <section id="experience">
-      <div class="container">
-        <div class="sec-head">
-          <span class="sec-tag mono">// 04. experience</span>
+          <span class="sec-tag mono">// 02. experience</span>
           <h2>Professional Experience</h2>
         </div>
         <div class="timeline">
@@ -603,13 +464,116 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         PROJECTS
-    ════════════════════════════════ -->
-    <section id="projects">
+<section id="skills">
       <div class="container">
         <div class="sec-head">
-          <span class="sec-tag mono">// 05. projects</span>
+          <span class="sec-tag mono">// 03. tech stack</span>
+          <h2>Skills &amp; Technologies</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-code sc-icon cyan"></i>
+              <span>Programming Languages</span>
+            </div>
+            <div class="badges">
+              <span class="badge cyan">Python</span>
+              <span class="badge cyan">R</span>
+              <span class="badge cyan">Java</span>
+              <span class="badge cyan">SQL</span>
+              <span class="badge cyan">PrestoSQL</span>
+              <span class="badge cyan">Trino</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-chart-bar sc-icon purple"></i>
+              <span>Data Visualization &amp; BI</span>
+            </div>
+            <div class="badges">
+              <span class="badge purple">Tableau</span>
+              <span class="badge purple">Google Looker Studio</span>
+              <span class="badge purple">Power BI</span>
+              <span class="badge purple">Metabase</span>
+              <span class="badge purple">Microsoft Excel</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-database sc-icon green"></i>
+              <span>Databases &amp; Query Engines</span>
+            </div>
+            <div class="badges">
+              <span class="badge green">Snowflake</span>
+              <span class="badge green">Hive</span>
+              <span class="badge green">DBeaver</span>
+              <span class="badge green">Google BigQuery</span>
+              <span class="badge green">Redshift</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-cogs sc-icon orange"></i>
+              <span>Data Engineering &amp; Automation</span>
+            </div>
+            <div class="badges">
+              <span class="badge orange">Apache Airflow</span>
+              <span class="badge orange">dbt</span>
+              <span class="badge orange">UiPath</span>
+              <span class="badge orange">ETL Pipelines</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-brain sc-icon magenta"></i>
+              <span>Machine Learning &amp; AI</span>
+            </div>
+            <div class="badges">
+              <span class="badge magenta">NLP</span>
+              <span class="badge magenta">Recommendation Systems</span>
+              <span class="badge magenta">Model Optimization</span>
+              <span class="badge magenta">Model Deployment</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-robot sc-icon cyan"></i>
+              <span>Generative AI &amp; LLMs</span>
+            </div>
+            <div class="badges">
+              <span class="badge cyan">Amazon Bedrock</span>
+              <span class="badge cyan">OpenAI API</span>
+              <span class="badge cyan">Prompt Engineering</span>
+              <span class="badge cyan">Vector DB Search</span>
+            </div>
+          </div>
+
+          <div class="skill-cat reveal">
+            <div class="sc-header">
+              <i class="fas fa-globe sc-icon purple"></i>
+              <span>Frontend Development</span>
+            </div>
+            <div class="badges">
+              <span class="badge purple">HTML</span>
+              <span class="badge purple">CSS</span>
+              <span class="badge purple">JavaScript</span>
+              <span class="badge purple">React</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="projects">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 04. projects</span>
           <h2>Featured Projects</h2>
         </div>
 
@@ -664,56 +628,10 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         FEATURED IN
-    ════════════════════════════════ -->
-    <section id="featured">
+<section id="certifications">
       <div class="container">
         <div class="sec-head">
-          <span class="sec-tag mono">// 06. press</span>
-          <h2>Featured In</h2>
-        </div>
-        <div class="featured-grid">
-
-          <a
-            href="https://www.science.nus.edu.sg/blog/2024/01/smash-hits/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="featured-card reveal"
-          >
-            <div class="fc-glow"></div>
-            <div class="fc-header">
-              <div class="fc-source">
-                <div class="fc-source-icon"><i class="fas fa-university"></i></div>
-                <div>
-                  <span class="fc-source-name">NUS Faculty of Science</span>
-                  <span class="fc-source-sub mono">science.nus.edu.sg</span>
-                </div>
-              </div>
-              <span class="fc-type-badge">Article</span>
-            </div>
-            <h3 class="fc-title">Smash Hits</h3>
-            <p class="fc-excerpt">
-              Spotlighted in the NUS Faculty of Science blog for competitive badminton achievements,
-              including representation at the FISU World University Games and the ASEAN School Games.
-            </p>
-            <div class="fc-footer">
-              <span class="fc-date mono">January 2024</span>
-              <span class="fc-cta">Read Article <i class="fas fa-external-link-alt"></i></span>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════════════
-         CERTIFICATIONS
-    ════════════════════════════════ -->
-    <section id="certifications">
-      <div class="container">
-        <div class="sec-head">
-          <span class="sec-tag mono">// 07. certifications</span>
+          <span class="sec-tag mono">// 05. certifications</span>
           <h2>Licenses &amp; Certifications</h2>
         </div>
 
@@ -856,10 +774,88 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         VOLUNTEERING
-    ════════════════════════════════ -->
-    <section id="volunteering">
+<section id="gallery">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 06. gallery</span>
+          <h2>Sports &amp; Life</h2>
+        </div>
+        <p class="sec-sub">A few moments from competitions, campus life, and team events.</p>
+      </div>
+
+      <div class="gallery-shell reveal">
+        <div class="gallery-scene">
+          <div class="carousel-viewport" id="carousel-viewport">
+            <div class="carousel-track" id="carousel-track"></div>
+          </div>
+
+          <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="carousel-dots"></div>
+        <div class="gallery-hint mono">Drag / swipe to rotate • Use arrows</div>
+      </div>
+    </section>
+
+<section id="awards">
+      <div class="container">
+        <div class="sec-head">
+          <span class="sec-tag mono">// 07. honors</span>
+          <h2>Honors &amp; Awards</h2>
+        </div>
+        <div class="awards-grid">
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-award aw-icon"></i>
+            <h3>EAGLES Award</h3>
+            <p>Edusave Award for Achievement, Good Leadership and Service</p>
+            <span class="aw-meta">2012–2014, 2018, 2020</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-medal aw-icon"></i>
+            <h3>RGS Cecily Hinchliffe Award</h3>
+            <p>Academic and Sporting Excellence</p>
+            <span class="aw-meta">Raffles Girls' School · Dec 2019</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-trophy aw-icon"></i>
+            <h3>Sportsmanship Award</h3>
+            <p>National Inter-School Badminton Championships</p>
+            <span class="aw-meta">Jan 2016</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-star aw-icon"></i>
+            <h3>Sports Girl of the Year</h3>
+            <p>Kong Hwa School</p>
+            <span class="aw-meta">Jan 2014</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-ribbon aw-icon"></i>
+            <h3>Raffles Colours Outstanding Award</h3>
+            <p>Leadership and Performance</p>
+            <span class="aw-meta">Raffles Girls' School · 2015 &amp; 2018</span>
+          </div>
+          <div class="award-card reveal">
+            <div class="aw-glow"></div>
+            <i class="fas fa-certificate aw-icon"></i>
+            <h3>SSSC Colours Award</h3>
+            <p>Singapore Schools Sports Council</p>
+            <span class="aw-meta">Yearly 2015–2019</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="volunteering">
       <div class="container">
         <div class="sec-head">
           <span class="sec-tag mono">// 08. volunteering</span>
@@ -929,93 +925,48 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         AWARDS
-    ════════════════════════════════ -->
-    <section id="awards">
-      <div class="container">
-        <div class="sec-head">
-          <span class="sec-tag mono">// 09. honors</span>
-          <h2>Honors &amp; Awards</h2>
-        </div>
-        <div class="awards-grid">
-          <div class="award-card reveal">
-            <div class="aw-glow"></div>
-            <i class="fas fa-award aw-icon"></i>
-            <h3>EAGLES Award</h3>
-            <p>Edusave Award for Achievement, Good Leadership and Service</p>
-            <span class="aw-meta">2012–2014, 2018, 2020</span>
-          </div>
-          <div class="award-card reveal">
-            <div class="aw-glow"></div>
-            <i class="fas fa-medal aw-icon"></i>
-            <h3>RGS Cecily Hinchliffe Award</h3>
-            <p>Academic and Sporting Excellence</p>
-            <span class="aw-meta">Raffles Girls' School · Dec 2019</span>
-          </div>
-          <div class="award-card reveal">
-            <div class="aw-glow"></div>
-            <i class="fas fa-trophy aw-icon"></i>
-            <h3>Sportsmanship Award</h3>
-            <p>National Inter-School Badminton Championships</p>
-            <span class="aw-meta">Jan 2016</span>
-          </div>
-          <div class="award-card reveal">
-            <div class="aw-glow"></div>
-            <i class="fas fa-star aw-icon"></i>
-            <h3>Sports Girl of the Year</h3>
-            <p>Kong Hwa School</p>
-            <span class="aw-meta">Jan 2014</span>
-          </div>
-          <div class="award-card reveal">
-            <div class="aw-glow"></div>
-            <i class="fas fa-ribbon aw-icon"></i>
-            <h3>Raffles Colours Outstanding Award</h3>
-            <p>Leadership and Performance</p>
-            <span class="aw-meta">Raffles Girls' School · 2015 &amp; 2018</span>
-          </div>
-          <div class="award-card reveal">
-            <div class="aw-glow"></div>
-            <i class="fas fa-certificate aw-icon"></i>
-            <h3>SSSC Colours Award</h3>
-            <p>Singapore Schools Sports Council</p>
-            <span class="aw-meta">Yearly 2015–2019</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ════════════════════════════════
-         CONTACT
-    ════════════════════════════════ -->
-    <section id="contact">
+<section id="contact">
       <div class="container">
         <div class="sec-head centered">
-          <span class="sec-tag mono">// 10. contact</span>
+          <span class="sec-tag mono">// 09. contact</span>
           <h2>Let's Connect</h2>
           <p class="contact-sub">
             Open to collaborations, conversations, and new opportunities in data science and AI.
           </p>
         </div>
+        
         <div class="contact-grid">
-          <a href="mailto:ashley@example.com" class="contact-card reveal">
-            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
-            <span class="cc-label">Email</span>
-            <span class="cc-val">ashley@example.com</span>
+          <a class="contact-card reveal" href="mailto:ashleylim26@gmail.com">
+            <div class="cc-icon cyan"><i class="fas fa-envelope"></i></div>
+            <div class="cc-body">
+              <span class="cc-label mono">Email</span>
+              <span class="cc-value">ashleylim26@gmail.com</span>
+            </div>
+            <i class="fas fa-arrow-right cc-arrow"></i>
           </a>
-          <a href="https://www.linkedin.com/in/ashlimlo" target="_blank" class="contact-card reveal">
-            <div class="cc-icon"><i class="fab fa-linkedin"></i></div>
-            <span class="cc-label">LinkedIn</span>
-            <span class="cc-val">ashlimlo</span>
+
+          <a class="contact-card reveal" href="https://www.linkedin.com/in/ashleylim26/" target="_blank" rel="noopener noreferrer">
+            <div class="cc-icon purple"><i class="fab fa-linkedin"></i></div>
+            <div class="cc-body">
+              <span class="cc-label mono">LinkedIn</span>
+              <span class="cc-value">linkedin.com/in/ashleylim26</span>
+            </div>
+            <i class="fas fa-arrow-right cc-arrow"></i>
           </a>
-          <a href="https://ashlimlo.github.io/" target="_blank" class="contact-card reveal">
-            <div class="cc-icon"><i class="fas fa-globe"></i></div>
-            <span class="cc-label">Main Portfolio</span>
-            <span class="cc-val">ashlimlo.github.io</span>
+
+          <a class="contact-card reveal" href="https://github.com/ashlimlo" target="_blank" rel="noopener noreferrer">
+            <div class="cc-icon green"><i class="fab fa-github"></i></div>
+            <div class="cc-body">
+              <span class="cc-label mono">GitHub</span>
+              <span class="cc-value">github.com/ashlimlo</span>
+            </div>
+            <i class="fas fa-arrow-right cc-arrow"></i>
           </a>
         </div>
       </div>
     </section>
+
+
 
     <!-- Footer -->
     <footer>
